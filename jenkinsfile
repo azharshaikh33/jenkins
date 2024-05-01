@@ -12,16 +12,17 @@ pipeline {
         maven 'maven-3.8.6'
     }
 
-        parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Azhar', description: 'He is a learner')
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'likes DevOps')
-        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        // parameters {
+        // string(name: 'PERSON', defaultValue: 'Mr Azhar', description: 'He is a learner')
+        // text(name: 'BIOGRAPHY', defaultValue: '', description: 'likes DevOps')
+        // booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+        // choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
     stages {
-        stage('Testing mvn commands')
+
+        stage('Testing mvn commands') {
             steps {
                 sh 'mvn --version'
             }
