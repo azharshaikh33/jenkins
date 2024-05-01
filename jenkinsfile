@@ -6,6 +6,8 @@ pipeline {
         SSH_CREDENTIALS = credentials ('SSH_CRED')
     }
 
+    triggers { cron('*/1 * * * *') }
+
         parameters {
         string(name: 'PERSON', defaultValue: 'Mr Azhar', description: 'He is a learner')
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'likes DevOps')
