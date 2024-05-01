@@ -21,7 +21,7 @@ pipeline {
         stage('Stage Name - 3') {
 
         environment { 
-        ENV_URL = "local.variable.com"
+        ENV_URL = "server.azharpro.digital"
     }
             steps {
                 sh '''
