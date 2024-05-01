@@ -23,8 +23,8 @@ pipeline {
                 sh '''
 
                 echo i am learning jenkins
-                lets learn to the core
-                well it seems easy
+                echo lets learn to the core
+                echo well it seems easy
 
                 '''
             }
