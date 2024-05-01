@@ -21,7 +21,7 @@ pipeline {
         stage('Stage Name - 3') {
 
         environment { 
-        ENV_URL = "pipeline.learning.com"
+        ENV_URL = "local.variable.com"
     }
             steps {
                 sh '''
@@ -29,6 +29,7 @@ pipeline {
                 echo i am learning jenkins
                 echo lets learn to the core
                 echo well it seems easy
+                echo print local variable ${ENV_URL}
 
                 '''
             }
