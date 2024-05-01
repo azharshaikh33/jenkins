@@ -19,6 +19,10 @@ pipeline {
         }
 
         stage('Stage Name - 3') {
+
+        environment { 
+        ENV_URL = "pipeline.learning.com"
+    }
             steps {
                 sh '''
 
