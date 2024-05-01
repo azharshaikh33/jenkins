@@ -17,6 +17,13 @@ pipeline {
     }
 
     stages {
+        stage('Testing mvn commands')
+            steps {
+                sh 'mvn clean'
+            }
+    }
+
+    stages {
         stage('Stage Name - 1') {
             steps {
                 sh 'echo This is my first stage in the Jenkins pipeline..'
