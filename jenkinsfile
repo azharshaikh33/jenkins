@@ -23,6 +23,29 @@ pipeline {
 
     stages {
 
+        stage('Parallel In Sequential') {
+                    parallel {
+                        stage('one') {
+                            steps {
+                                sh "echo stage one"
+                                sh "sleep 10"
+                            }
+                        }
+                            stage('two') {
+                            steps {
+                                sh "echo stage one"
+                                sh "sleep 10"
+                            }
+                        }
+                            stage('three') {
+                            steps {
+                                sh "echo stage one"
+                                sh "sleep 10"
+                            }
+                        }
+                    }
+        }
+
         stage('Testing mvn commands') {
             steps {
                 sh "mvn --version"
