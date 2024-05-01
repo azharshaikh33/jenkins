@@ -6,7 +6,7 @@ pipeline {
         SSH_CREDENTIALS = credentials ('SSH_CRED')
     }
 
-    triggers { pollSCM('*/1 * * * *') }
+    // triggers { pollSCM('*/1 * * * *') }
 
     tools {
         maven 'maven-3.8.6'
