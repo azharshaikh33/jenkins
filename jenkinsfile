@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment { 
+        ENV_URL = "pipeline.learning.com"
+    }
+
     stages {
         stage('Stage Name - 1') {
             steps {
@@ -10,7 +14,7 @@ pipeline {
 
         stage('Stage Name - 2') {
             steps {
-                sh 'echo executing stage 2'
+                sh 'printing the ${ENV_URL}'
             }
         }
 
@@ -21,7 +25,7 @@ pipeline {
                 echo i am learning jenkins
                 lets learn to the core
                 well it seems easy
-                
+
                 '''
             }
         }
