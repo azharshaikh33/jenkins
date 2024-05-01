@@ -24,7 +24,7 @@ pipeline {
 
         stage('Testing mvn commands') {
             steps {
-                sh 'mvn --version'
+                sh "mvn --version"
             }
     }
 
