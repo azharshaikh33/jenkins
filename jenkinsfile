@@ -16,7 +16,13 @@ pipeline {
 
         stage('Stage Name - 3') {
             steps {
-                sh 'echo executing stage 3'
+                sh '''
+
+                echo i am learning jenkins
+                lets learn to the core
+                well it seems easy
+                
+                '''
             }
         }
     }
