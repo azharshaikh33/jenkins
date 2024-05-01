@@ -20,14 +20,15 @@ pipeline {
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     // }
 
+
     stages {
+
         stage('Testing mvn commands') {
             steps {
                 sh "mvn --version"
             }
-    }
+        }
 
-    stages {
         stage('Stage Name - 1') {
             steps {
                 sh 'echo This is my first stage in the Jenkins pipeline..'
@@ -58,5 +59,4 @@ pipeline {
             }
         }
     }
-}
 }
