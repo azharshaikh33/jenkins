@@ -36,6 +36,7 @@ pipeline {
         }
 
         stage('Stage Name - 2') {
+            when { branch 'dev' }
             steps {
                 sh 'echo printing the ${ENV_URL}'
                 sh 'env'
