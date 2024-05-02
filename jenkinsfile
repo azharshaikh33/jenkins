@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'ws' }
 
     environment { 
         ENV_URL = "pipeline.learning.com"
@@ -28,6 +28,7 @@ pipeline {
                         stage('one') {
                             steps {
                                 sh "echo stage one"
+                                sh "ifconfig"
                                 sh "sleep 10"
                             }
                         }
