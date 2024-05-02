@@ -28,7 +28,7 @@ pipeline {
                         stage('one') {
                             steps {
                                 sh "echo stage one"
-                                sh "cat /home/centos/file.txt"
+                                sh "ifconfig"
                                 sh "sleep 10"
                             }
                         }
