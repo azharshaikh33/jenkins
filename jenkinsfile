@@ -45,7 +45,7 @@ pipeline {
                             }
                         }
                     }
-        }
+                }
 
         stage('Testing mvn commands') {
             steps {
