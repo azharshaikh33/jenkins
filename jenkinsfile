@@ -27,7 +27,7 @@ pipeline {
                     parallel {
                         stage('one') {
                             steps {
-                                sh "echo stage one"
+                                sh "env"
                                 sh "ifconfig"
                                 sh "sleep 10"
                             }
