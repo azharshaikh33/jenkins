@@ -8,7 +8,7 @@ pipeline {
         ansiColor('xterm')
     }
     stages {
-        stage('Terraform Create Network') {
+        stage('Terraform Destroy Network') {
             steps {
                 git branch: 'main', url: 'https://github.com/azharshaikh33/terraform-vpc.git'
                 sh "terrafile -f env-dev/Terrafile"
@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('Terraform Create Databases') {
+        stage('Terraform Destry Databases') {
             steps {
                 git branch: 'main', url: 'https://github.com/azharshaikh33/terraform-databases.git'
                 sh "terrafile -f env-dev/Terrafile"
