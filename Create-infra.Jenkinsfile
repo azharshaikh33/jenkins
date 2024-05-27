@@ -12,7 +12,7 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/azharshaikh33/terraform-vpc.git'
                 sh "terrafile -f env-dev/Terrafile"
-                sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
+                sh "terraform init -reconfigure -backend-config=env-${ENV}/${ENV}-backend.tfvars"
                 sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
                 sh "terraform apply -var-file=env-${ENV}/${ENV}.tfvars -auto-approve"
             }
