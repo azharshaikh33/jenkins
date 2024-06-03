@@ -29,19 +29,19 @@ pipeline {
                             steps {
                                 sh "env"
                                 sh "ifconfig"
-                                sh "sleep 10"
+                                // sh "sleep 1"
                             }
                         }
                             stage('two') {
                             steps {
                                 sh "echo stage one"
-                                sh "sleep 10"
+                                // sh "sleep 1"
                             }
                         }
                             stage('three') {
                             steps {
                                 sh "echo stage one"
-                                sh "sleep 10"
+                                // sh "sleep 1"
                             }
                         }
                     }
