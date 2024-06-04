@@ -83,6 +83,7 @@ pipeline {
             steps {
                 sh '''
 
+                env
                 echo i am learning jenkins
                 echo lets learn to the core
                 echo well it seems easy
